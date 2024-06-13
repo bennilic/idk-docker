@@ -1,0 +1,12 @@
+rootProject.name = "idk-docker"
+
+List projects = [
+        'idk-backend',
+        'idk-frontend',
+        'idk-frontend-2'
+]
+
+for(String projectFolder : projects) {
+    include ":"+projectFolder
+    project(':'+projectFolder).projectDir = new File(settingsDir, '../'+projectFolder)
+}
