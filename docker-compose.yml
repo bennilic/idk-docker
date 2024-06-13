@@ -14,6 +14,16 @@ services:
     depends_on:
       - idk-backend
 
+  idk-frontend:
+    build:
+      context: ../idk-frontend
+      dockerfile: ./Dockerfile
+    networks:
+      - internal
+    expose:
+      - 80
+    restart: always
+
   idk-backend:
     build:
       context: ../idk-backend
