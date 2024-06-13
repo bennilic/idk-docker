@@ -45,7 +45,7 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin1234
-      POSTGRES_DB: master
+      POSTGRES_DB: idk
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:
