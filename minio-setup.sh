@@ -13,4 +13,5 @@ mc mb myminio/images
 mc anonymous set download myminio/images
 
 # Set the bucket policy to allow public read
-mc policy set-json /setup/minio-policy.json myminio/images
+mc anonymous set public myminio/images
+#mc anonymous set-json /setup/minio-policy.json myminio/images
