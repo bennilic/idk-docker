@@ -66,6 +66,7 @@ services:
       - internal
     volumes:
       - ./minio-setup.sh:/setup/minio-setup.sh
+      - ./minio-policy.json:/setup/minio-policy.json
 
   minio:
     image: minio/minio
