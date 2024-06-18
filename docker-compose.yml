@@ -13,10 +13,22 @@ services:
       - internal
     depends_on:
       - idk-backend
+      - idk-frontend
+      - idk-frontend-2
 
   idk-frontend:
     build:
       context: ../idk-frontend
+      dockerfile: ./Dockerfile
+    networks:
+      - internal
+    expose:
+      - 80
+    restart: always
+
+  idk-frontend-2:
+    build:
+      context: ../idk-frontend-2/client-webshop
       dockerfile: ./Dockerfile
     networks:
       - internal
